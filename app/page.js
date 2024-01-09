@@ -1,113 +1,173 @@
-import Image from 'next/image'
+import Image from "next/image";
+
+import Link from "next/link";
+
+import a from "../public/logo.png";
+
+import b from "../public/Frame imag 1 sec.png";
+
+import hr from "../public/cliend imag.png";
+
+import { FaBars } from "react-icons/fa";
+
+import Card from "./(compoments)/card/card";
+
+import Div from "./(compoments)/div/div";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <>
+      <nav>
+        <div>
+          <Image src={a} className="w-[85px]" alt="l" />
+        </div>
+        <input type="checkbox" id="click" />
+        <label for="click">
+          <FaBars />
+        </label>
+        <ul>
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#">Menu</a>
+          </li>
+          <li>
+            <a href="#">About</a>
+          </li>
+          <li>
+            <a href="#">Blog</a>
+          </li>
+          <li>
+            <a href="#">
+              <button className="bg-green-500 text-white px-3 py-2 rounded-3xl">
+                Sigen up
+              </button>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      {/* section 2 start */}
+
+      <div className="max-w-[1400px] mt-14 lg:flex lg:flex-row justify-center gap-20 ">
+        <div className="max-w-[470px]">
+          <p className="text-red-600">Are you ready to Learn?</p>
+
+          <p className="lg:text-5xl md:text-4xl text-4xl mt-5 font-bold leading-[70px]">
+            Learn With fun on
+            <span className="text-green-600"> any schedule</span>
+          </p>
+
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Varius
+            blandit facilisis quam netus
+          </p>
+
+          <button className="bg-green-600 text-white rounded-3xl px-3 py-2 mt-5">
+            Get start
+          </button>
+        </div>
+
+        <div className="max-w-[600px]">
+          <Image className="justify-center mx-auto" src={b} alt="l" />
         </div>
       </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+      {/* card */}
+
+      <div className="max-w-[1500px] lg:grid  lg:grid-cols-4  md:grid md:grid-cols-2 mx-auto justify-center    mt-10  ">
+        <Card sr={require("../public/image 1 card.png")} title="1500+ Topic" />
+        <Card
+          sr={require("../public/image 2 card.png")}
+          title="1800+ Students"
+        />
+        <Card
+          sr={require("../public/image 3 card.png")}
+          title="9K+ Test Token"
+        />
+        <Card
+          sr={require("../public/image 4 card.png")}
+          title="2000+ Student"
         />
       </div>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <div className="max-w-[400px] mx-auto mt-10 mb-5 justify-center">
+        <p className="text-4xl font-bold">Online Courses</p>
       </div>
-    </main>
-  )
+
+      <div className="max-w-[1500px] lg:grid lg:grid-cols-3  mg:grid md:grid-cols-2 mx-auto justify-center  mt-16 mb-10 ">
+        <Div hr={require("../public/card 2 1 imag.png")} />
+        <Div hr={require("../public/card 2 2 imag.png")} />
+        <Div hr={require("../public/card 3 3 imag.png")} />
+      </div>
+
+      <div className="max-w-[400px] mx-auto mt-10 mb-5 justify-center">
+        <p className="text-4xl font-bold">Testimonial</p>
+      </div>
+
+      {/* Client Section Start */}
+
+      <div className="max-w-[800px] mx-auto mt-10">
+        <div className="lg:flex lg:flex-row gap-10">
+          <Image
+            className="mx-auto"
+            height={100}
+            width={170}
+            src={hr}
+            alt="kkk"
+          />
+          <p className="pt-8 mx-auto text-center">
+            There are many variations of passages of Lorem Ipsum available, but
+            the majority have suffered alteration in some form, by injected
+            humour, or randomised words which don't look even slightly
+            believable.
+          </p>
+        </div>
+      </div>
+
+      {/* Client Section Close  */}
+
+      {/* footer start */}
+
+      <div className="w-[100%] bg-black mt-10 text-white py-5 px-9 ">
+        <div className="max-w-[1400px] lg:grid lg:grid-cols-4 md:grid-cols-2 mx-auto justify-center mt-10 mb-10 space-y-5 ">
+          <div className="max-w-[300px] justify-center mx-auto">
+            <p className="text-center mt-4">
+              Millions of people of all ages and from around the world are
+              improving their lives with us
+            </p>
+          </div>
+          <div className="max-w-[300px] justify-center text-center mx-auto">
+            <p className="text-3xl font-bold mb-3 text-center">Course</p>
+            <p>Graphic Design</p>
+            <p>Web Design</p>
+            <p>Business</p>
+            <p>Marketing</p>
+            <p>Engineering</p>
+          </div>
+          <div className="max-w-[300px] justify-center text-center mx-auto">
+            <p className="text-3xl font-bold mb-3 text-center">Terms</p>
+            <p>Graphic Design</p>
+            <p>Web Design</p>
+            <p>Business</p>
+            <p>Marketing</p>
+            <p>Engineering</p>
+          </div>
+          <div className="max-w-[300px] justify-center text-center mx-auto">
+            <p className="text-3xl font-bold mb-3 text-center">Useful Link</p>
+            <p>Graphic Design</p>
+            <p>Web Design</p>
+            <p>Business</p>
+            <p>Marketing</p>
+            <p>Engineering</p>
+          </div>
+        </div>
+
+        <div className="max-w-[500px] mx-auto justify-center mt-36 mb-8">
+          <p className="text-center ">Copyright © 2020 Rokomari.com</p>
+        </div>
+      </div>
+    </>
+  );
 }
